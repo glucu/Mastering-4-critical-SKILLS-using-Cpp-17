@@ -1,19 +1,19 @@
 #include <iostream>
 
+// 123 -> 321
+
 int main() {
 
     int n{};
     std::cin >> n;
-    
-    int res{};
-    while(n != 0) {
-        int lastDigit{n % 10};
 
-        res = res * 10 + lastDigit;
+    int result{};
+    while(n != 0) {
+        result = (result * 10) + (n % 10);
         n /= 10;
     }
 
-    std::cout << res << ' ' << res * 3 << '\n';
+    std::cout << result << ' ' << (result * 3) << '\n';
 
     return 0;
 }
